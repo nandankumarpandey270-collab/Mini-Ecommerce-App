@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <p class="small-title">LIVE WEATHER</p>
+                <h1>Weather Dashboard</h1>
+                <p class="subtitle">
+                    Real-time weather and 5-day forecast for any city.
+                </p>
+            </div>
+
+            <div id="status" class="status">
+                Ready
+            </div>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-box">
+
+            <form id="weatherForm">
+
+                <label for="cityInput">
+                    Search City
+                </label>
+
+                <div class="search-row">
+
+                    <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Enter city name e.g. Kolkata"
+                    >
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                </div>
+
+                <p id="error" class="error"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- Weather Section -->
+        <section id="weatherSection" class="hidden">
+
+            <!-- Current Weather -->
+            <div class="current-weather">
+
+                <div>
+                    <p id="location" class="location">
+                        —
+                    </p>
+
+                    <p id="updated" class="updated">
+                        —
+                    </p>
+                </div>
+
+
+                <div class="weather-main">
+
+                    <div id="currentIcon" class="weather-icon">
+                        ☀️
+                    </div>
+
+                    <div>
+
+                        <div class="temperature">
+                            <span id="temperature">—</span>
+                            <span>°C</span>
+                        </div>
+
+                        <p id="condition">
+                            —
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Weather Details -->
+                <div class="details">
+
+                    <div>
+                        <span>Feels Like</span>
+                        <strong id="feelsLike">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Humidity</span>
+                        <strong id="humidity">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Wind</span>
+                        <strong id="wind">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5 Day Forecast -->
+            <div class="forecast">
+
+                <div class="forecast-title">
+
+                    <div>
+                        <h2>5-Day Forecast</h2>
+                        <p>Daily weather forecast</p>
+                    </div>
+
+                </div>
+
+                <div id="forecastContainer" class="forecast-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Initial Message -->
+        <section id="emptyState" class="empty">
+
+            <div class="empty-icon">
+                🌤️
+            </div>
+
+            <h2>Search for a city</h2>
+
+            <p>
+                Enter a city name above to get live weather information.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+        Live Weather Dashboard | Fetch API
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
