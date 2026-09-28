@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini E-Commerce App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛍️ Mini Shop</h1>
+        <button id="cartBtn">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+
+        <div id="productList" class="product-list"></div>
+    </main>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close">✕</button>
+
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span>₹<span id="cartTotal">0</span></span>
+            </div>
+
+            <button id="checkoutBtn" class="checkout-btn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
